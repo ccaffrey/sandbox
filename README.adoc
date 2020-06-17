@@ -9,3 +9,10 @@ Cloned from https://spring.io/guides/gs/actuator-service/#initial
 ```
 curl --location --request POST 'http://localhost:9000/login?username=plastiq&password=bigsecret'
 ```
+
+# Requirements
+1. Fix the current problem!
+
+2. Create a secure API for performing an API login
+
+3. Create a second API for fetching Foreign Exchange Rate Data
