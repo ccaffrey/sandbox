@@ -3,3 +3,9 @@
 Sandbox repo for Interview work
 
 Cloned from https://spring.io/guides/gs/actuator-service/#initial
+
+
+# Test API
+```
+curl --location --request POST 'http://localhost:9000/login?username=plastiq&password=bigsecret'
+```
