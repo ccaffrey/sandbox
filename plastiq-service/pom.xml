@@ -8,11 +8,11 @@
 		<version>2.2.2.RELEASE</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.example</groupId>
-	<artifactId>actuator-service</artifactId>
+	<groupId>com.plastiq</groupId>
+	<artifactId>plastiq-service</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>actuator-service</name>
-	<description>Demo project for Spring Boot</description>
+	<name>plastiq-service</name>
+	<description>A Spring Boot Application to serve Plastiq REST APIs</description>
 
 	<properties>
 		<java.version>1.8</java.version>

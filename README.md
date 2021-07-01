@@ -5,6 +5,7 @@
 
 # Setup
 
+- `cd interview-app1`
 - Build the project - e.g. via `mvn clean install`
 - Run the Spring Boot Application - `PlastiqApplication`
 - Invoke the API - e.g.
@@ -18,6 +19,5 @@ curl --request POST http://localhost:9000/login?username=plastiq&password=bigsec
 - Build and run the aplication
 - Identify and fix any bugs found with the initial implementation
 - Once the initial issues are fixed, start refactoring the code to try achieve the following:
-    - Improve any issues or gaps identified with the current implementation
-    - A secure API for performing a login
+    - Improve any issues or gaps identified with the current implementation of the login API
     - Create a second API for fetching Foreign Exchange Rate Data
