@@ -9,10 +9,11 @@ import org.springframework.stereotype.Service;
 @Service
 public class LoginService {
 	
-	final String AUTHORIZED_USER = "plastiq";
-	final String UTHORIZED_PASSWORD = "bigsecret";
+	final String PLASTIQ_AUTHORIZED_USERNAME = "plastiq";
+	final String PLASTIQ_AUTHORIZED_PASSWORD = "bigsecret";
 	
-	final ExecutorService executor = Executors.newFixedThreadPool(10);
+	// Use an executor service to perform any login work in background thread(s)
+	final ExecutorService executorService = Executors.newFixedThreadPool(10);
 	
 	/**
 	 * Login the user based on the supplied credentials
@@ -21,7 +22,7 @@ public class LoginService {
 	 */
 	public synchronized boolean login(final LoginCredentials credentials) throws Exception {
 		
-		final Future<Boolean> loginResponseFuture = executor.submit(() -> {
+		final Future<Boolean> loginResponseFuture = executorService.submit(() -> {
 		    return this.authenticate(credentials);
 		});
 		
@@ -38,8 +39,8 @@ public class LoginService {
 	 * 
 	 * @return boolean result of authentication
 	 */
-	public synchronized Boolean authenticate(final  LoginCredentials credentials) {
-		return credentials.getUsername().equals(AUTHORIZED_USER) && credentials.getPassword().equals(UTHORIZED_PASSWORD);
+	public synchronized Boolean authenticate(final LoginCredentials credentials) {
+		return credentials.getUsername().equals(PLASTIQ_AUTHORIZED_USERNAME) && credentials.getPassword().equals(PLASTIQ_AUTHORIZED_PASSWORD);
 	}	
 
 }
